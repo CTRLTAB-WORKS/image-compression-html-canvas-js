@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPRESS TEST</title>
+</head>
+<body>
+        <input type="file" name="INPUT_FILE" id="INPUT_FILE">
+        <br>
+        <img src="" name="OUTPUT_IMAGE" id="OUTPUT_IMAGE">
+    <script src="_compress.min.js"></script>
+    <script>
+    document.querySelector('#INPUT_FILE').addEventListener('change',_=>{
+        ___compress('INPUT_FILE','image/png',400,500,compressed_OUTPUT_image=>
+        {
+            document.querySelector('#OUTPUT_IMAGE').src = compressed_OUTPUT_image
+        }) 
+    })
+    </script>
+</body>
+</html>
